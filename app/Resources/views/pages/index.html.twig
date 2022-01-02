@@ -1,0 +1,38 @@
+{{include('pages/inc/header.html.twig')}}
+ <div class="container">
+ 
+  <div class="row">
+  <a class="btn btn-primary" href="/post/create">Create Post</a>
+  </div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Category</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for post in posts %}
+    <tr class="table-active">
+      <th scope="row">{{post.id}}</th>
+      <td>{{post.title}}</td>
+      <td>{{post.description}}</td>
+      <td>{{post.category}}</td>
+      <td>
+      <a class="btn btn-primary">View</a>
+      <a class="btn btn-success">Edit</a>
+      <a class="btn btn-danger">Delete</a>
+      </td>
+    </tr>
+    {% else %}
+    <tr>
+    <td>No records found !!</td>
+    </tr>
+   {% endfor %}
+  </tbody>
+</table>
+</div>
+{{include('pages/inc/footer.html.twig')}}
