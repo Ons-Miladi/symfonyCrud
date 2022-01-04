@@ -2,7 +2,7 @@
  <div class="container">
  
   <div class="row">
-  <a class="btn btn-primary" href="/post/create">Create Post</a>
+  <a class="btn btn-primary" href="/categ/create">Create Post</a>
   </div>
 <table class="table table-hover">
   <thead>
@@ -15,16 +15,17 @@
     </tr>
   </thead>
   <tbody>
-  {% for post in posts %}
+  {% for categ in categories %}
     <tr class="table-active">
-      <th scope="row">{{post.id}}</th>
-      <td>{{post.title}}</td>
-      <td>{{post.description}}</td>
+      <th scope="row">{{categ.id}}</th>
+      <td>{{categ.titre}}</td>
+      <td>{{categ.description}}</td>
     
       <td>
-      <a class="btn btn-primary btn-sm" href="/post/view/{{post.id}}">View</a>
-      <a class="btn btn-success btn-sm" href="/post/update/{{post.id}}">Edit</a>
-      <a class="btn btn-danger btn-sm" href="/post/delete/{{post.id}}">Delete</a>
+      <a class="btn btn-primary btn-sm" href="/categ/view/{{categ.id}}">View</a>
+      <a class="btn btn-success btn-sm" href="/categ/update/{{categ.id}}">Edit</a>
+      <a class="btn btn-danger btn-sm" href="/categ/delete/{{categ.id}}">Delete</a>
+      <a class="btn btn-danger btn-sm" href="/post">Posts</a>
       </td>
     </tr>
     {% else %}

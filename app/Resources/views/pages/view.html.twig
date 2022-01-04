@@ -1,1 +1,16 @@
-<h1>Edit</h1>
+
+{{include('pages/inc/header.html.twig')}}
+<div class="container ">
+
+<h2>View Post</h2>
+
+<div class="list-group">
+  <p href="#" class="list-group-item list-group-item-action active">POST</p>
+    <p href="#" class="list-group-item list-group-item-action">{{post.title}}</p>
+  <p href="#" class="list-group-item list-group-item-action">{{post.description}}</p>
+
+   <p href="#" class="list-group-item list-group-item-action"><a class="btn btn-primary btn-sm" href="/post">Back</a></p>
+</div>
+
+ </div>
+ {{include('pages/inc/footer.html.twig')}}
